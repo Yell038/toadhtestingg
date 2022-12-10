@@ -509,6 +509,10 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+			case 'kingdom': //mushroomhehe
+				var bg:BGSprite = new BGSprite('LANDOFCOOL_NEW', -230, -100, 0.9, 1);
+				add(bg);
+	
 			case 'stage': //Week 1
 				var bg:BGSprite = new BGSprite('stageback', -600, -200, 0.9, 0.9);
 				add(bg);
@@ -3500,6 +3504,11 @@ class PlayState extends MusicBeatState
 				var value:Int = Std.parseInt(value1);
 				if(Math.isNaN(value) || value < 1) value = 1;
 				gfSpeed = value;
+
+			case 'defaultCamZoom':
+				var value:Int = Std.parseInt(value1);
+				if(Math.isNaN(value)) value = 0;
+				defaultCamZoom = value;
 
 			case 'Philly Glow':
 				var lightId:Int = Std.parseInt(value1);
